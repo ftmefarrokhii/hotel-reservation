@@ -7,8 +7,8 @@ import { useEffect } from "react"
 
 export default function SignUp(){
     const navigate = useNavigate()
-    const { loading, error, users ,isAuthenticated } = useSelector((state) => state.auth)
-    console.log("users : ",users);
+    const { isAuthenticated } = useSelector((state) => state.auth)
+    
     useEffect(()=>{
         if(isAuthenticated) navigate('/' , {replace: true })
         console.log("isAuthenticated : ",isAuthenticated);

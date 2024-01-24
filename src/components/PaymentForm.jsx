@@ -1,15 +1,28 @@
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
+import { addAsyncReservation } from "../features/ReservationSlice"
+import { useDispatch } from 'react-redux'
+import { useNavigate, useParams } from 'react-router-dom';
+import { useHotel } from '../context/HotelProvider';
+import { useEffect } from 'react';
 
-export default function PaymentForm({price}){
-    console.log(price);
+export default function PaymentForm(){
+    const {id} = useParams()
+    const {getHotel,isLoadingCurrHotel,currentHotel,EmptyCurrHotel} = useHotel()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    useEffect(()=>{
+        getHotel(id)
+    },[id])
+
     const initialValues = {
         cart_number : "" , 
         Cv2 : "" , 
         Year : "" , 
         Month :"",
         password : "" ,  
-        price : price
+        price : currentHotel.price
     }
     const validationSchema = Yup.object({
         cart_number : Yup.string().required('cart number is required').min(16,'cart number must 16 number'),
@@ -21,8 +34,13 @@ export default function PaymentForm({price}){
 
     const onSubmit = (values) => {
         console.log(values);
-        // dispatch(addAsyncUser(values))
-        //formik.resetForm()
+        console.log(currentHotel);
+
+        const newReserve = {values, currentHotel}
+        dispatch(addAsyncReservation(newReserve))
+        formik.resetForm()
+        alert("reservation done!!!")
+        navigate("/") 
     }
     const formik = useFormik(
         {
@@ -43,8 +61,6 @@ export default function PaymentForm({price}){
                 <Input label="Month" name="Month" formik={formik}/>
                 <Input label="Password" name="password" type="password" formik={formik}/>
                 <Input label="payment" name="price" formik={formik}/>
-
-                
 
                 <div className="buttons">
                     <button className="btn btn--primary" type="submit" disabled={!formik.isValid}>

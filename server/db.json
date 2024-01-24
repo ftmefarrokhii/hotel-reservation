@@ -348,62 +348,12 @@
   ],
   "favorites": [
     {
-      "id": "9192415",
-      "name": "Cozy apartment center Amsterdam",
-      "description": "Cozy 2 person apartment in Amsterdam on walking distance from Vondelpark, Museum Square and Leidseplein. The appartment has a living room, a kitchen, a bathroom (shower and toilet), a sleeping room and two balconys.  The kitchen is fully equipped (refrigerator, oven, microwave, coffee maker, toaster, blender, dishwasher, ..). The bed is very comfortable for 2 persons (180 x 200). Bedlinen, towels, soap, shampoo and a hairdryer is provided. You can use a closet with hangers. You have acces to wireless internet. Also provided: 2 umbrellas, city guide and map in English. This is an apartment situated at the West side of the Vondelpark in Amsterdam. The apartmant is suitable for 1 or 2 people. The apartment is on the 1th floor. The Albert Heijn market is nearby (200 metres). There are a lot of restaurants on the street. The apartment is located nearby Vondelpark (1min walk), Museumplein (3min walk), Leidseplein and the centre of Amsterdam. Vondelpark, Museum Square, Leidsplein is on walkin",
-      "thumbnail_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=small",
-      "medium_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=medium",
-      "picture_url": {
-        "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/1293262ae799ac118c65bc0ef90bc3b8"
-      },
-      "xl_picture_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=x_large",
-      "host_location": "Espania, Madrid",
-      "host_thumbnail_url": "https://a0.muscache.com/im/pictures/0fc41f38-7ed2-4116-ab28-c8dd3b12d92d.jpg?aki_policy=profile_small",
-      "host_picture_url": "https://a0.muscache.com/im/pictures/0fc41f38-7ed2-4116-ab28-c8dd3b12d92d.jpg?aki_policy=profile_x_medium",
-      "smart_location": "Espania, Madrid",
-      "latitude": "40.4178743741405",
-      "longitude": "-3.6900329589843754",
-      "room_type": "Entire home/apt",
-      "accommodates": 2,
-      "bathrooms": 1,
-      "bedrooms": 1,
-      "beds": 1,
-      "amenities": [
-        "TV",
-        "Cable TV",
-        "Internet",
-        "Wireless Internet",
-        "Kitchen",
-        "Buzzer/wireless intercom",
-        "Heating",
-        "Smoke detector",
-        "Carbon monoxide detector",
-        "First aid kit",
-        "Safety card",
-        "Fire extinguisher",
-        "Essentials",
-        "Shampoo",
-        "Hangers",
-        "Hair dryer",
-        "Iron",
-        "Laptop friendly workspace",
-        "translation missing: en.hosting_amenity_49",
-        "translation missing: en.hosting_amenity_50"
-      ],
-      "price": 95,
-      "geolocation": {
-        "lon": 4.8738603256015365,
-        "lat": 52.36137101269532
-      }
-    },
-    {
       "id": "6017649",
       "name": "Nice room at Vondelpark",
       "description": "Nice and clean private bedroom near the city center, 15 minutes by bike to Central station, Leidseplein  Several shops, bars, restaurants and transports five minutes from my place.  Balcony, bath, towels, shampoo, shower, wifi, music lounge,",
       "picture_url": {
         "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/1333549eac1ff1f91b4443e0dc910c3a"
       },
-      "host_location": "Amsterdam, North Holland, Netherlands",
       "smart_location": "Amsterdam, Netherlands",
       "latitude": "48.56",
       "longitude": "2.35",
@@ -423,5 +373,6 @@
       "price": 50
     }
   ],
-  "reservationList": []
+  "reservationList": [
+  ]
 }

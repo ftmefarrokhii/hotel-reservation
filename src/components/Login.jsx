@@ -31,7 +31,6 @@ export default function Login(){
     const onSubmit = (values) => {
         {users.find((user)=> user.email === values.email && user.password === values.password) ?
             dispatch(authenticateUser()) : alert("this account doesnt exist")}
-       
     }
     
     const formik = useFormik(

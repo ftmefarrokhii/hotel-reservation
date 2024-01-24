@@ -13,7 +13,6 @@ import Modal from './Modal';
 import {HeartIcon, TrashIcon} from '@heroicons/react/24/outline'
 import { getAsyncFavorites ,removeAsyncFavorites} from '../features/FavoriteSlice';
 
-
 export default function Header(){
     const[searchParams,setSearchParams]=useSearchParams()
     const[destination,setDestination] = useState(searchParams.get("destination") || "")
@@ -31,9 +30,9 @@ export default function Header(){
 
     function handleSearch(){
         // setSearchParams({date,options,destinaton})
-        const encodedParams= createSearchParams({// chon date va options object an b ebarat ghabele fahm tabdil mikne
+        const encodedParams= createSearchParams({
             date:JSON.stringify(date),
-            destination,       // string niazi ndre
+            destination,       
             options:JSON.stringify(options)
         })
         setSearchParams(encodedParams)
@@ -107,7 +106,7 @@ export default function Header(){
                 <div className="headerSearchItem">
                     <HiCalendar className='headerIcon dateIcon'/>
                     <div className="dateDropDown" onClick={()=>setOpenDate(!openDate)}>
-                        {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(date[0].endDate, "MM/dd/yyyy")}` }
+                        {`${format(date[0].startDate, "yyyy-MM-dd")} to ${format(date[0].endDate, "yyyy-MM-dd")}` }
                     </div>
                         {openDate && <DateRange className='date' minDate={new Date()}
                         ranges={date} onChange={(item)=>setDate([item.selection])} />}

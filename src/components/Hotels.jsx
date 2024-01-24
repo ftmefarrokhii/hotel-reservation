@@ -1,4 +1,4 @@
-import { Link, useSearchParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useHotel } from "../context/HotelProvider"
 
 export default function Hotels(){

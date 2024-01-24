@@ -1,24 +1,16 @@
 import { Link, useNavigate, useParams} from "react-router-dom";
 import { useHotel } from "../context/HotelProvider";
 import { useEffect } from "react";
-import { addAsyncReservation } from "../features/ReservationSlice";
-import { useDispatch } from "react-redux";
 
 export default function SingleHotel(){
     const {id} = useParams()
-
     const {getHotel,isLoadingCurrHotel,currentHotel,EmptyCurrHotel} = useHotel()
-    const dispatch = useDispatch()
     const navigate = useNavigate()
+
     useEffect(()=>{
         getHotel(id)
     },[id])
 
-    const reserveHandler = (currentHotel) => {
-        console.log(currentHotel);
-        dispatch(addAsyncReservation(currentHotel))
-    }
-    
     function backBtnHandler(){
         navigate(-1)
         EmptyCurrHotel()
@@ -48,7 +40,7 @@ export default function SingleHotel(){
                     <div>beds : {currentHotel.beds}</div>
                 </div>
                 
-                <button className="btn btn--primary" onClick={()=>reserveHandler(currentHotel)}>
+                <button className="btn btn--primary">
                     <Link to={`/book-hotel/${currentHotel.id}`}>
                     Book Now
                     </Link>

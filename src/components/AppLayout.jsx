@@ -3,8 +3,6 @@ import Map from "./Map";
 import { useHotel } from "../context/HotelProvider";
 export default function AppLayout(){
     const {hotels} = useHotel()
-   
-
     return(
         <div className="appLayout">
             <div className="sidebar">

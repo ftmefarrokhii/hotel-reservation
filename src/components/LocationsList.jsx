@@ -5,8 +5,9 @@ import {useNavigate } from "react-router-dom";
 import { getAsyncHotels } from "../features/HotelSlice";
 import { useHotel } from "../context/HotelProvider";
 import Accordions from "./Accordions";
+
 export default function LocationsList(){
-    
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const { hotels,loading,error } = useSelector((state) => state.hotels)
     const {getHotel,isLoadingCurrHotel,currentHotel} = useHotel()
@@ -21,7 +22,6 @@ export default function LocationsList(){
         dispatch(addAsyncFavorites(item)) 
     }
 
-    const navigate = useNavigate()
     const showMoreHandler = (hotelId)=>{
         getHotel(hotelId)
         navigate(`/hotels/${hotelId}?lat=${currentHotel.latitude}&lng=${currentHotel.longitude}`)
@@ -51,8 +51,6 @@ export default function LocationsList(){
                              </button>
                             
                              <button className="btn btn--primary" onClick={()=> showMoreHandler(item.id)}>show more</button>
-                           
-
                             </div>
                            
                         </div>
